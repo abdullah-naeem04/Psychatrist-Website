@@ -1,0 +1,32 @@
+@import "tailwindcss";
+.fill-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+  }
+  
+  .fill-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #3b82f6;
+  
+    /* Start fully hidden on the left */
+    transform: translateX(-100%);
+    
+    /* smoother modern easing */
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  
+    z-index: -1;
+  }
+  
+  .fill-btn:hover::before {
+    transform: translateX(0);
+  }
+  
+  .fill-btn:hover {
+    color: white;
+  }
