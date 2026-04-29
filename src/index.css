@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+section[id] {
+  scroll-margin-top: 10px;
+}
+
 .fill-btn {
     position: relative;
     overflow: hidden;

@@ -3,30 +3,32 @@ import React from "react";
 
 const Home = () => {
   return (
-    <section id="home">
-      <div className="my-21 min-h-[calc(100vh-84px)] max-w-330 mx-auto flex items-center flex-col md:flex-row px-5 ">
+    <section id="home" className="mt-10 p-5">
+      <div className="min-h-[calc(100vh-84px)] max-w-330 mx-auto flex items-center flex-col md:flex-row">
         <div className="w-full md:w-1/2 my-6 md:my-4">
+        <div className="flex justify-center md:justify-start">
           <div className="inline-flex bg-blue-50 text-blue-600 rounded-full sm:px-4 px-3 py-2 text-sm items-center">
             <CircleCheck width={18} />
             <span className="pl-2">Verified Doctor</span>
             <Dot strokeWidth={3} />
             <span>PMDC Registered</span>
           </div>
+          </div>
           <div className="flex flex-col gap-5 my-4">
-            <h1 className="text-5xl font-bold text-gray-800 py-4">
+            <h1 className="text-5xl font-bold text-gray-800 py-4 text-center md:text-start">
               Dr. Farwa Naeem
             </h1>
-            <span className="text-lg font-medium text-gray-500">
+            <span className="text-lg font-medium text-gray-500 text-center md:text-start">
               Consultant psychiatrist
             </span>
-            <p className="text-lg text-gray-700 ">
+            <p className="text-lg text-gray-700 text-center md:text-start">
               Expert psychiatric care for adults, children, and adolescents.
               Specialized in mental health disorders, addiction recovery, and
               comprehensive psychotherapy services in allover the world.
             </p>
           </div>
           <div className="w-full flex py-4">
-            <div className="w-1/2">
+            <div className="w-1/2 flex justify-center md:justify-start">
               <div className="flex gap-2">
                 <div className="bg-blue-100 text-blue-600 inline-flex sm:p-4 p-3 rounded-xl">
                   <CircleCheck />
@@ -41,7 +43,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 flex justify-center md:justify-start">
               <div className="flex gap-2">
                 <div className="bg-blue-100 text-blue-600 inline-flex sm:p-4 p-3 rounded-xl">
                   <Star />
@@ -65,7 +67,7 @@ const Home = () => {
               Book Vedio Consultation
             </button>
           </div>
-          <div className="flex gap-5 pt-2">
+          <div className="flex gap-5 pt-2 justify-center md:justify-start">
             <div className="flex gap-1 text-xs items-center">
               <CircleCheck width={18} className="text-green-600" />
               <span className="text-gray-600">Same Day Appointment</span>

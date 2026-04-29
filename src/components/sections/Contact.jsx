@@ -1,11 +1,3 @@
-import React from 'react'
+import Contact from "../contact/Contact";
 
-const Contact = () => {
-  return (
-    <section id='contact'>
-        <div className='h-[200vh] bg-pink-500'></div>
-    </section>
-  )
-}
-
-export default Contact
+export default Contact;

@@ -4,8 +4,8 @@ import Experience from "../utils/Experience";
 
 const About = () => {
   return (
-    <section id="about">
-      <div className="max-w-330 mx-auto my-20 px-5">
+    <section id="about" className="mt-10 p-5">
+      <div className="max-w-330 mx-auto">
         <div className="max-w-3xl mx-auto ">
           <div className="text-center">
           <span className="inline-block text-xs font-semibold tracking-widest text-blue-600 uppercase mb-3 px-4 py-1.5 bg-blue-50 rounded-full border border-blue-100">
@@ -29,7 +29,7 @@ const About = () => {
             />
           </div>
           <div className="w-full md:w-1/2 py-10 md:py-0">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Professional Profile
             </h3>
             <p className="text-md text-gray-600 py-2">

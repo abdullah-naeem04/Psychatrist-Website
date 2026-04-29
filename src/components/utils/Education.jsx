@@ -55,7 +55,7 @@ const Education = () => {
 
   return (
     <div className="mt-20 bg-linear-to-r from-gray-50 via-gray-100 to-blue-50 rounded-lg min-h-120 ">
-        <h2 className="py-10 font-semibold text-2xl text-center text-gray-800">Qualification and Education</h2>
+        <h2 className="py-10 font-bold text-2xl text-center text-gray-800">Qualification and Education</h2>
       <div className="max-w-6xl mx-auto px-5 pb-10">
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

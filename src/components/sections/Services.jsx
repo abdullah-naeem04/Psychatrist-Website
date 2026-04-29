@@ -84,7 +84,7 @@ const Services = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section id="services" className="my-20 py-5 px-5 bg-white overflow-hidden">
+    <section id="services" className="my-20 p-5 bg-white overflow-hidden">
       <div className="max-w-325 mx-auto">
 
         <div className="text-center mb-10">
