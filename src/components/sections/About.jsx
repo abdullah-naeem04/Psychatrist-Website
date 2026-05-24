@@ -1,4 +1,5 @@
 import React from "react";
+import doctorInfo from "../../config/doctorInfo";
 import Education from "../utils/Education";
 import Experience from "../utils/Experience";
 
@@ -13,7 +14,7 @@ const About = () => {
           </span>
           </div>
           <h2 className="md:text-5xl text-4xl font-bold text-gray-800 text-center">
-            About Doctor Farwa Naeem
+            About {doctorInfo.name}
           </h2>
           <p className="text-lg text-gray-600 text-center mt-5">
             A dedicated psychiatrist committed to providing compassionate,
@@ -33,7 +34,7 @@ const About = () => {
               Professional Profile
             </h3>
             <p className="text-md text-gray-600 py-2">
-              Dr. Farwa Naeem is a highly experienced consultant psychiatrist
+              {doctorInfo.name} is a highly experienced consultant psychiatrist
               practicing in Lahore, Pakistan, with over 15 years of dedicated
               service in the field of mental health. He specializes in treating
               a wide range of psychiatric conditions including depression,
@@ -41,7 +42,7 @@ const About = () => {
               use disorders.
             </p>
             <p className="text-md text-gray-600 py-2">
-              With a patient-centered approach, Dr. Zafar combines the latest
+              With a patient-centered approach, {doctorInfo.name} combines the latest
               evidence-based treatments with compassionate care to help patients
               achieve mental wellness and improve their quality of life. He is
               particularly skilled in managing complex cases and providing

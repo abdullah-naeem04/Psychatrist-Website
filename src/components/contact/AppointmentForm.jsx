@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
+import doctorInfo from "../../config/doctorInfo";
 import {
   amPmItems,
   formatDateISO,
@@ -227,7 +228,7 @@ const AppointmentForm = ({
             <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 mb-2">
               Phone Number *
             </label>
-            <input id="phone" type="tel" placeholder="+92 300 1234567" className={inputBaseStyle} {...register("phone")} />
+            <input id="phone" type="tel" placeholder={doctorInfo.phone} className={inputBaseStyle} {...register("phone")} />
             {errors.phone ? <p className={errorStyle}>{errors.phone.message}</p> : null}
           </div>
 

@@ -1,5 +1,6 @@
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import React from "react";
+import doctorInfo from "../../config/doctorInfo";
 import useScrollSpy from "../../hooks/useScrollSpy";
 
 const navLinks = [
@@ -28,7 +29,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-bold leading-snug">Dr. Farwa Naeem</h2>
+            <h2 className="text-2xl font-bold leading-snug">{doctorInfo.name}</h2>
             <p className="mt-6 text-gray-400 leading-8 text-sm">
               Providing compassionate, evidence-based psychiatric care to
               patients in Lahore and across Pakistan.
@@ -88,7 +89,7 @@ const Footer = () => {
                 <div className="text-blue-400 mt-1"><Phone width={18} /></div>
 
                 <div className="text-slate-300 text-md leading-9">
-                  <p>+92 300 1234567</p>
+                  <p>{doctorInfo.phone}</p>
                 </div>
               </div>
 
@@ -97,7 +98,7 @@ const Footer = () => {
                 <div className="text-emerald-400 mt-1"><Mail width={18}/></div>
 
                 <p className="text-slate-300 text-md break-all">
-                  dr.farwanaeem@gmail.com
+                  {doctorInfo.email}
                 </p>
               </div>
               {/* Address */}
@@ -116,7 +117,7 @@ const Footer = () => {
           {/* Bottom Row */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <p className="text-gray-400 text-sm sm:text-md text-center lg:text-left">
-            {new Date().getFullYear()} &copy; Dr. Farwa Naeem. All rights reserved.
+            {new Date().getFullYear()} &copy; {doctorInfo.name}. All rights reserved.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">

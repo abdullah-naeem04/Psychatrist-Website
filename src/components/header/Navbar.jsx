@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Phone, Menu, X } from "lucide-react";
+import doctorInfo from "../../config/doctorInfo";
 import useScrollSpy from "../../hooks/useScrollSpy";
 
 const NAV_LINKS = [
@@ -76,7 +77,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <div>
-              <h2 className="text-xl font-semibold">Dr. Farwa Naeem</h2>
+              <h2 className="text-xl font-semibold">{doctorInfo.name}</h2>
               <span className="text-sm text-gray-500">Consultant Psychiatrist</span>
             </div>
 

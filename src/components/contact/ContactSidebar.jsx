@@ -1,4 +1,5 @@
 import { Clock4, Mail, Phone } from "lucide-react";
+import doctorInfo from "../../config/doctorInfo";
 
 const ContactSidebar = ({ notes }) => {
   return (
@@ -26,7 +27,7 @@ const ContactSidebar = ({ notes }) => {
                 <p className="text-sm text-slate-500">Email</p>
 
                 <p className="font-semibold text-slate-800">
-                  appointments@drfarwa.com
+                  {doctorInfo.email}
                 </p>
               </div>
             </div>
@@ -38,7 +39,7 @@ const ContactSidebar = ({ notes }) => {
               </div>
               <div className="relative z-10">
                 <p className="text-sm text-slate-500">Phone</p>
-                <p className="font-semibold text-slate-800">+92 300 1234567</p>
+                <p className="font-semibold text-slate-800">{doctorInfo.phone}</p>
               </div>
             </div>
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import doctorInfo from "../../config/doctorInfo";
 import AppointmentForm from "./AppointmentForm";
 import ContactSidebar from "./ContactSidebar";
 import { appointmentSchema, notes } from "./utils";
@@ -57,7 +58,7 @@ const Contact = () => {
             Book Your Appointment
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            Schedule a consultation with Dr. Farwa Naeem.
+            Schedule a consultation with {doctorInfo.name}.
           </p>
         </div>
 

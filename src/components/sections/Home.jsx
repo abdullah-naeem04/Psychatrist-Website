@@ -1,5 +1,6 @@
 import { CircleCheck, Dot, Star } from "lucide-react";
 import React from "react";
+import doctorInfo from "../../config/doctorInfo";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
           </div>
           <div className="flex flex-col gap-5 my-4">
             <h1 className="text-5xl font-bold text-gray-800 py-4 text-center md:text-start">
-              Dr. Farwa Naeem
+              {doctorInfo.name}
             </h1>
             <span className="text-lg font-medium text-gray-500 text-center md:text-start">
               Consultant psychiatrist
@@ -82,7 +83,7 @@ const Home = () => {
           <div className="flex justify-center  w-full relative">
             <img
               src="/images/doctor-img1.png"
-              alt="Doctor Farwa Naeem Psychologist image"
+              alt={`${doctorInfo.name} Psychologist image`}
               className="sm:w-5/6 w-full h-auto max-h-[550px] object-cover rounded-2xl"
             />
 

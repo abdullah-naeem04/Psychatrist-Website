@@ -1,12 +1,13 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import doctorInfo from "../../config/doctorInfo";
 import ReviewCard from "../utils/ReveiwsCard";
 import { MoveLeft, MoveRight, Quote } from "lucide-react";
 
-const reviews = [
+const getReviews = () => [
   {
     rating: 5,
-    text: "Dr. Farwa has been incredible in helping me manage my depression and anxiety. His compassionate approach and evidence-based treatment have truly transformed my life. I can't thank him enough for his patience and expertise.",
+    text: `${doctorInfo.name} has been incredible in helping me manage my depression and anxiety. His compassionate approach and evidence-based treatment have truly transformed my life. I can't thank him enough for his patience and expertise.`,
     name: "Ryan Almeida",
     disease: "Depression & Anxiety",
     time: "3 weeks ago",
@@ -14,7 +15,7 @@ const reviews = [
   },
   {
     rating: 4,
-    text: "I was struggling with bipolar disorder for years before I found Dr. Farwa. His comprehensive treatment plan and regular follow-ups have helped me achieve stability. He's not just a doctor, he genuinely cares about his patients",
+    text: `I was struggling with bipolar disorder for years before I found ${doctorInfo.name}. His comprehensive treatment plan and regular follow-ups have helped me achieve stability. He's not just a doctor, he genuinely cares about his patients`,
     name: "Blossom Menezes",
     disease: "Bipolar Disorder",
     time: "March 2026",
@@ -22,7 +23,7 @@ const reviews = [
   },
   {
     rating: 5,
-    text: "Dr. Farwa helped my son overcome severe behavioral issues and ADHD. His approach with children is exceptional gentle, understanding, and effective. Our whole family is grateful for the positive changes we've seen.",
+    text: `${doctorInfo.name} helped my son overcome severe behavioral issues and ADHD. His approach with children is exceptional gentle, understanding, and effective. Our whole family is grateful for the positive changes we've seen.`,
     name: "Jason Roy",
     disease: "Child Psychiatry (Son, 12 years)",
     time: "Feb 2026",
@@ -30,7 +31,7 @@ const reviews = [
   },
   {
     rating: 5,
-    text: "After struggling with substance abuse for 8 years, Dr. Farwa's addiction recovery program helped me reclaim my life. His structured approach, combined with compassionate care, made all the difference. I've been sober for 18 months now.",
+    text: `After struggling with substance abuse for 8 years, ${doctorInfo.name}'s addiction recovery program helped me reclaim my life. His structured approach, combined with compassionate care, made all the difference. I've been sober for 18 months now.`,
     name: "Jason Roy",
     disease: "Addiction Recovery",
     time: "Dec 2025",
@@ -38,7 +39,7 @@ const reviews = [
   },
   {
     rating: 5,
-    text: "Dr. Farwa's expertise in treating OCD and panic disorders is remarkable. The cognitive behavioral therapy sessions, along with proper medication management, have significantly reduced my symptoms. Highly recommended!",
+    text: `${doctorInfo.name}'s expertise in treating OCD and panic disorders is remarkable. The cognitive behavioral therapy sessions, along with proper medication management, have significantly reduced my symptoms. Highly recommended!`,
     name: "Jason Roy",
     disease: "OCD & Panic Disorder",
     time: "Nov 2025",
@@ -46,7 +47,7 @@ const reviews = [
   },
   {
     rating: 5,
-    text: "As a corporate executive, I was dealing with severe work stress and burnout. Dr. Farwa's psychotherapy sessions helped me develop healthy coping mechanisms and achieve work-life balance. His professional yet warm demeanor is very reassuring",
+    text: `As a corporate executive, I was dealing with severe work stress and burnout. ${doctorInfo.name}'s psychotherapy sessions helped me develop healthy coping mechanisms and achieve work-life balance. His professional yet warm demeanor is very reassuring`,
     name: "Jason Roy",
     disease: "Work Stress & Burnout",
     time: "Aug 2025",
@@ -55,6 +56,8 @@ const reviews = [
 ];
 
 const Reviews = () => {
+  const reviews = getReviews();
+
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -102,8 +105,8 @@ const Reviews = () => {
         </h2>
 
         <p className="text-gray-600 text-lg max-w-xl mx-auto leading-relaxed">
-          Real experiences from patients who have received care from Dr. Farwa
-          Naeem
+          Real experiences from patients who have received care from{" "}
+          {doctorInfo.name}
         </p>
       </div>
 
