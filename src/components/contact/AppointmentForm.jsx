@@ -14,6 +14,13 @@ import {
   toDisplayTime,
 } from "./utils";
 
+const scrollWheelItemToCenter = (container, item, behavior = "smooth") => {
+  if (!container || !item) return;
+  const targetScroll =
+    item.offsetTop - container.clientHeight / 2 + item.clientHeight / 2;
+  container.scrollTo({ top: targetScroll, behavior });
+};
+
 const WheelColumn = ({ label, items, selectedValue, onChange, ariaLabel }) => {
   const containerRef = useRef(null);
   const [itemHeight, setItemHeight] = useState(44);
@@ -34,10 +41,11 @@ const WheelColumn = ({ label, items, selectedValue, onChange, ariaLabel }) => {
   }, []);
 
   useEffect(() => {
+    const container = containerRef.current;
     const selectedElement = itemRefs.current[selectedIndex];
-    if (!selectedElement) return;
+    if (!container || !selectedElement) return;
     isAutoScrollingRef.current = true;
-    selectedElement.scrollIntoView({ block: "center", behavior: "smooth" });
+    scrollWheelItemToCenter(container, selectedElement);
     const releaseTimer = setTimeout(() => {
       isAutoScrollingRef.current = false;
     }, 220);
@@ -71,10 +79,7 @@ const WheelColumn = ({ label, items, selectedValue, onChange, ariaLabel }) => {
     const nearestItem = items[nearestIndex];
     if (!nearestItem) return;
     onChange(nearestItem);
-    itemRefs.current[nearestIndex]?.scrollIntoView({
-      block: "center",
-      behavior: "smooth",
-    });
+    scrollWheelItemToCenter(containerRef.current, itemRefs.current[nearestIndex]);
   };
 
   const handleScroll = () => {
